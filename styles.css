@@ -6,3 +6,9 @@
     justify-content: center;
     align-items: center;
 }
+span{
+    font-size: 34px;
+    color: #ced097;
+    font-family: 'Pridi', serif;
+    letter-spacing: 3px;
+}
