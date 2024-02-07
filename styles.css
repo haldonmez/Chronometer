@@ -28,6 +28,7 @@ span {
     text-align: center;
     flex-grow: 1;
     display: flex;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
 }
