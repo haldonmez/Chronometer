@@ -1,14 +1,33 @@
-.back
-{
+body {
+    margin: 0;
+    background-color: #0e1822;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.back {
     background-color: #152535;
     height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-span{
+
+span {
     font-size: 34px;
     color: #ced097;
     font-family: 'Pridi', serif;
     letter-spacing: 3px;
+}
+
+.counter {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
