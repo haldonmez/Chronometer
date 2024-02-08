@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #0e1822;
+    background-color: black;
 }
 
 .container {
@@ -10,8 +10,9 @@ body {
 }
 
 .back {
-    background-color: #152535;
+    background-color: black;
     height: 5rem;
+    border-bottom: 3px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +20,7 @@ body {
 
 span {
     font-size: 34px;
-    color: #ced097;
+    color: white;
     font-family: 'Pridi', serif;
     letter-spacing: 3px;
 }
