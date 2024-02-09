@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title id="timer">00:00:00</title>
+        <title id="icon">00:00:00</title>
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Pridi">
         <link rel="icon" type="image/x-icon" href="icon.ico">
@@ -16,9 +16,10 @@
                     00:00:00
                 </div>
                 <div class="buttons">   
-                    <button onclick="startChronoMeter()">Start</button>
-                    <button onclick="stopChronoMeter()">Stop</button>
-                    <button onclick="resetChronoMeter()">Reset</button>
+                    <button id="startButton" onclick="startChronoMeter()">Start</button>
+                    <button id="stopButton" onclick="stopChronoMeter()">Stop</button>
+                    <button id="resetButton" onclick="resetChronoMeter()">Reset</button> 
+                    <button id="saveButton" onclick="saveChronoMeter()">Save</button>
                 </div>
             </div>
         <script src="main.js">  </script>
