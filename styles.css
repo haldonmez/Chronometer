@@ -48,6 +48,10 @@ button{
     height: 50px;
     font-size: 20px;
 }
+button:hover{
+    background-color: white;
+    color: black;
+}
 
 .buttons{
     display: flex;
