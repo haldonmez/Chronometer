@@ -32,7 +32,15 @@ span {
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .timer{
     color: white;
+}
+button{
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 1px;
+    color: white;
+    font-family: 'Pridi', serif;
 }
