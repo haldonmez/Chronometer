@@ -51,9 +51,8 @@ function saveChronoMeter()
 {
     const newLabel = document.createElement('p');
     newLabel.textContent = 'Click me!';
-    newLabel.style.color = 'white';
-    newLabel.style.display= "flex";
-    var containerDiv = document.querySelector(".savedTimes");
+    newLabel.className = 'myClass';
+    var containerDiv = document.querySelector(".container");
     containerDiv.appendChild(newLabel);
 
 }
