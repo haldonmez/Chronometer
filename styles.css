@@ -84,11 +84,12 @@ button:hover{
     gap: 20px;
 }
 .savedTimes{
-    border: 5px solid white;
     align-self:baseline;
     width: 200px;
     height: 400px;
     flex-basis: 30%;
+    display: none;
+    overflow-y: auto;
 }
 .myClass{
     color: white;

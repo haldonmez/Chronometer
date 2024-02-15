@@ -54,5 +54,6 @@ function saveChronoMeter()
     newLabel.className = 'myClass';
     var containerDiv = document.querySelector(".savedTimes");
     containerDiv.appendChild(newLabel);
+    containerDiv.style.display="block"
 
 }
