@@ -83,3 +83,9 @@ button:hover{
     display: flex;
     gap: 20px;
 }
+.savedTimes{
+    border: 5px solid white;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+}

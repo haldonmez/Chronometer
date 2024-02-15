@@ -49,9 +49,11 @@ function pad(number) {
 
 function saveChronoMeter()
 {
-  const newLabel = document.createElement('p');
-  newLabel.textContent = 'Click me!';
-  newLabel.style.color = 'white';
-  document.body.appendChild(newLabel);
+    const newLabel = document.createElement('p');
+    newLabel.textContent = 'Click me!';
+    newLabel.style.color = 'white';
+    newLabel.style.display= "flex";
+    var containerDiv = document.querySelector(".savedTimes");
+    containerDiv.appendChild(newLabel);
 
 }
