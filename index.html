@@ -12,7 +12,10 @@
         <div class="container">
             <div class="back"><span>KRONOMETRE</span></div>
             <div class="counter">
-                <div class="savedTimes"></div>
+                <div class="savedTimesC">
+                    <div class="savedTimes"></div>
+                    <div><button id="clearButton" onclick="clearRecords()">Clear All Records</button></div>
+                </div>
                 <div class="centerh">
                     <div id="timer">
                     00:00:00
@@ -23,9 +26,9 @@
                         <button id="resetButton" onclick="resetChronoMeter()">Reset</button> 
                         <button id="saveButton" onclick="saveChronoMeter()">Save</button>
                     </div>
-                </div>
-                
+                </div>  
             </div> 
+            <div class="screenShot"><button class="ssButton "></button></div>
         </div>
         <script src="main.js">  </script>
     </body>

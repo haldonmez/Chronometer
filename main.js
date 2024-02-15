@@ -1,6 +1,8 @@
 var startTime; // to keep track of the start time
 var stopwatchInterval; // to keep track of the interval
 var elapsedPausedTime = 0; // to keep track of the elapsed time while stopped
+var currentTime;
+var elapsedTime;
 
 function startChronoMeter() {
   if (!stopwatchInterval) {
@@ -29,11 +31,13 @@ function resetChronoMeter() {
     elapsedPausedTime = 0; // reset the elapsed paused time variable
     document.getElementById("timer").innerHTML = "00:00:00";
     document.getElementById("icon").innerHTML = "00:00:00"; // reset the display
+    elapsedTime = 0;
+    
   }
 
 function updateStopwatch() {
-    var currentTime = new Date().getTime(); // get current time in milliseconds
-    var elapsedTime = currentTime - startTime; // calculate elapsed time in milliseconds
+    currentTime = new Date().getTime(); // get current time in milliseconds
+    elapsedTime = currentTime - startTime; // calculate elapsed time in milliseconds
     var seconds = Math.floor(elapsedTime / 1000) % 60; // calculate seconds
     var minutes = Math.floor(elapsedTime / 1000 / 60) % 60; // calculate minutes
     var hours = Math.floor(elapsedTime / 1000 / 60 / 60); // calculate hours
@@ -50,10 +54,31 @@ function pad(number) {
 function saveChronoMeter()
 {
     const newLabel = document.createElement('p');
-    newLabel.textContent = 'Click me!';
+    var seconds = Math.floor(elapsedTime / 1000) % 60; // calculate seconds
+    var minutes = Math.floor(elapsedTime / 1000 / 60) % 60; // calculate minutes
+    var hours = Math.floor(elapsedTime / 1000 / 60 / 60); // calculate hours
+    var displayTime = pad(hours) + ":" + pad(minutes) + ":" + pad(seconds);
+    newLabel.textContent = displayTime;
     newLabel.className = 'myClass';
+    var containerDiv2 = document.querySelector(".savedTimesC");
+    containerDiv2.style.display="block"
     var containerDiv = document.querySelector(".savedTimes");
+    var clearButton = document.querySelector("#clearButton");
     containerDiv.appendChild(newLabel);
     containerDiv.style.display="block"
+    clearButton.style.display="inline-block"
 
+}
+
+function clearRecords()
+{
+  var containerDiv = document.querySelector(".savedTimes");
+  var labels = containerDiv.querySelectorAll('.myClass');
+  labels.forEach(function(label) {
+    containerDiv.removeChild(label);
+  });
+  var clearButton1 = document.querySelector("#clearButton");
+  clearButton1.style.display="none"
+  var clearButton2 = document.querySelector(".savedTimesC")
+  clearButton2.style.display="none"
 }
