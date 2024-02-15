@@ -12,19 +12,21 @@
         <div class="container">
             <div class="back"><span>KRONOMETRE</span></div>
             <div class="counter">
-                <div id="timer">
+                <div class="savedTimes"></div>
+                <div class="centerh">
+                    <div id="timer">
                     00:00:00
+                    </div>
+                    <div class="buttons">   
+                        <button id="startButton" onclick="startChronoMeter()">Start</button>
+                        <button id="stopButton" onclick="stopChronoMeter()">Stop</button>
+                        <button id="resetButton" onclick="resetChronoMeter()">Reset</button> 
+                        <button id="saveButton" onclick="saveChronoMeter()">Save</button>
+                    </div>
                 </div>
-                <div class="buttons">   
-                    <button id="startButton" onclick="startChronoMeter()">Start</button>
-                    <button id="stopButton" onclick="stopChronoMeter()">Stop</button>
-                    <button id="resetButton" onclick="resetChronoMeter()">Reset</button> 
-                    <button id="saveButton" onclick="saveChronoMeter()">Save</button>
-                </div>
-            </div>
-            <div class="savedTimes"></div>
+                
+            </div> 
         </div>
-        
         <script src="main.js">  </script>
     </body>
 </html>
