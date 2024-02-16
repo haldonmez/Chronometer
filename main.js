@@ -89,5 +89,13 @@ function clearRecords()
 
 function takeScreenShot()
 {
-  
+  html2canvas(document.body)
+    .then(canvas=> {
+      const url =canvas.toDataURL("image/png");
+      const a = document.createElement("a");
+      const currentDate = new Date().toDateString();
+      a.setAttribute("download", currentDate);
+      a.setAttribute("href", url);
+      a.click();
+    })
 }
