@@ -86,3 +86,8 @@ function clearRecords()
   var clearButton2 = document.querySelector(".savedTimesC")
   clearButton2.style.display="none"
 }
+
+function takeScreenShot()
+{
+  
+}

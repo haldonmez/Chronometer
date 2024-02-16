@@ -116,7 +116,7 @@ button:hover{
     width:200px;
     height: 40px;
 }
-.ssButton{
+#ssButton{
     border:  0px solid black;
     background: url("917609-200.png") no-repeat; 
     background-size: cover;   
@@ -126,7 +126,7 @@ button:hover{
     margin-bottom: 1rem;
     margin-right: 1rem;
 }
-.ssButton:hover{
+#ssButton:hover{
     background-color: black;
     border: 1px solid white;
 }
