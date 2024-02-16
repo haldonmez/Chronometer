@@ -3,6 +3,7 @@ var stopwatchInterval; // to keep track of the interval
 var elapsedPausedTime = 0; // to keep track of the elapsed time while stopped
 var currentTime;
 var elapsedTime;
+var index;
 
 function startChronoMeter() {
   if (!stopwatchInterval) {
@@ -58,7 +59,8 @@ function saveChronoMeter()
     var minutes = Math.floor(elapsedTime / 1000 / 60) % 60; // calculate minutes
     var hours = Math.floor(elapsedTime / 1000 / 60 / 60); // calculate hours
     var displayTime = pad(hours) + ":" + pad(minutes) + ":" + pad(seconds);
-    newLabel.textContent = displayTime;
+    index=index+1;
+    newLabel.textContent = index+". "+displayTime;
     newLabel.className = 'myClass';
     var containerDiv2 = document.querySelector(".savedTimesC");
     containerDiv2.style.display="block"
@@ -72,6 +74,7 @@ function saveChronoMeter()
 
 function clearRecords()
 {
+  index =0;
   var containerDiv = document.querySelector(".savedTimes");
   var labels = containerDiv.querySelectorAll('.myClass');
   labels.forEach(function(label) {
