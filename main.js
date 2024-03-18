@@ -127,11 +127,22 @@ window.onclick = function(event) {
   }
 }
 
+var select = document.getElementById("dropdown1");
+
+for (var i = 1; i <= 120; i++) {
+  var option = document.createElement("option");
+  option.value = i;
+  option.text = i < 10 ? "0" + i + ":00" : i + ":00";
+  select.appendChild(option);
+}
 // Handle form submission
 document.getElementById("myForm").addEventListener("submit", function(event){
   event.preventDefault();
   // Get the form data
   var formData = new FormData(event.target);
+  var timelineValue = formData.get("dropdown1") < 10 ? "0" + formData.get("dropdown1") + ":00" : formData.get("dropdown1") + ":00" 
+  // Use the selected value
+  console.log("Timeline Value: ", timelineValue);
   // Use the form data
   console.log(formData.get("fname"));
   // Close the modal

@@ -198,13 +198,43 @@ button:hover{
   
   /* Dropdown menus */
   select {
-    width: 100%;
-    padding: 10px;
+    position:relative;
+    left: 85px;
+    width: 60%;
+    padding: 5px;
     margin: 5px 0;
     display: inline-block;
     border: 1px solid white;
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
   }
+  select:hover{
+    background-color: rgb(44, 43, 43);
+  }
+
+#submit {
+    position: relative;
+    left: 185px;
+    top: 5px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+#submit:hover{
+    background-color: rgb(44, 43, 43);
+}
+#label1{
+    color: white;
+    position:relative;
+    left: 85px;
+    font-family: 'Pridi', serif;
+    font-size: 15px;
+}
+#label2{
+    color: white;
+    position:relative;
+    left: 85px;
+    font-family: 'Pridi', serif;
+}
