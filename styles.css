@@ -130,3 +130,27 @@ button:hover{
     background-color: black;
     border: 1px solid white;
 }
+
+#notifyButton{
+    border:  1px solid white;
+    background: url("899039.png") no-repeat;
+    background-size: 95%;
+    background-position: center;
+    transition: background-size 2s ease-in-out;
+    width: 3rem;
+    height: 3rem;
+    padding: 10px;
+    position: relative;
+    left: 60px;
+    
+}
+
+#notifyButton:hover{
+    background-color: gray;
+    border: 1px solid white;
+    
+    background-size: 85% 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
