@@ -44,7 +44,23 @@ function updateStopwatch() {
     var hours = Math.floor(elapsedTime / 1000 / 60 / 60); // calculate hours
     var displayTime = pad(hours) + ":" + pad(minutes) + ":" + pad(seconds); // format display time
     document.getElementById("timer").innerHTML = displayTime; // update the display
-    document.getElementById("icon").innerHTML = displayTime; // update the display
+    document.getElementById("icon").innerHTML = displayTime;// update the display
+    console.log(displayTime)
+    let {timelineValue: timelineValue2, alarmSound: alarmValue2} = getNotify(); 
+    console.log(timelineValue2)
+    if (displayTime == timelineValue2){
+      // Create an Audio instance
+      let alarmSound = new Audio(alarmValue2);
+      // Play the sound
+      alarmSound.play();
+
+      // Stop the sound after 6 seconds
+      setTimeout(function() {
+      alarmSound.pause();
+      alarmSound.currentTime = 0;
+      }, 6000);
+    }
+
 }
   
 function pad(number) {
@@ -136,15 +152,29 @@ for (var i = 1; i <= 120; i++) {
   select.appendChild(option);
 }
 // Handle form submission
-document.getElementById("myForm").addEventListener("submit", function(event){
-  event.preventDefault();
-  // Get the form data
-  var formData = new FormData(event.target);
-  var timelineValue = formData.get("dropdown1") < 10 ? "0" + formData.get("dropdown1") + ":00" : formData.get("dropdown1") + ":00" 
-  // Use the selected value
-  console.log("Timeline Value: ", timelineValue);
-  // Use the form data
-  console.log(formData.get("fname"));
-  // Close the modal
-  modal.style.display = "none";
-});
+
+// Declare a global variable
+var timelineValueGlobal;
+var alarmSoundGlobal;
+
+
+function getNotify()
+  {
+    document.getElementById("myForm").addEventListener("submit", function(event){
+    event.preventDefault();
+    // Get the form data
+    var formData = new FormData(event.target);
+    var timelineValue = formData.get("dropdown1") < 10 ? "00:0" + formData.get("dropdown1") + ":00" : "00:" + formData.get("dropdown1") + ":00"; 
+    var alarmSound = formData.get("dropdown2");
+    // Use the selected value
+    console.log("Timeline Value: ", timelineValue);
+    // Use the form data
+    console.log(formData.get("fname"));
+    // Close the modal  
+    modal.style.display = "none";
+
+    timelineValueGlobal = timelineValue;
+    alarmSoundGlobal = alarmSound;
+    });
+    return {timelineValue: timelineValueGlobal, alarmSound: alarmSoundGlobal}; 
+  }
